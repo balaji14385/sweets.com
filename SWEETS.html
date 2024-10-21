@@ -1,0 +1,452 @@
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Bootstrap Accordion</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      body {
+         margin: 10px;
+         font-family: 'Poppins', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         font-size: 14px;
+      }
+
+      .ad {
+         margin: 20px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+
+      }
+
+      .box {
+         width: 235px;
+         border-radius: 14px;
+         border: 1px solid lightgray;
+         margin: 10px;
+         margin-bottom: 10px;
+         box-sizing: border-box;
+
+      }
+
+      a {
+         color: white;
+      }
+
+      .a {
+         height: 200;
+         width: 100%;
+         border-radius: 30px;
+         padding: 5px;
+
+      }
+
+      .p {
+         text-align: center;
+         color: black;
+         padding: 3px;
+      }
+
+      .logo {
+         height: 50px;
+         width: 50px;
+         border-radius: 50%;
+      }
+
+      .box:hover {
+         border-color: blue;
+         transform: scale(0.9);
+      }
+
+      h1 {
+         margin-top: 10px;
+         color: black;
+         text-align: center;
+         font-family: lucida;
+         text-decoration: underline;
+         text-decoration-color: red;
+         text-transform: capitalize;
+      }
+
+      .aa {
+         position: sticky;
+         top: 0;
+         z-index:1;
+      }
+
+      .p1 {
+         float: left;
+         margin-left: 15px;
+      }
+
+      .p2 {
+         float: right;
+         margin-right: 20px;
+      }
+
+      .center {
+         margin-left: 50px;
+         margin-bottom: 10px;
+      }
+
+      .btn {
+         border-radius: 14px;
+      }
+
+      .img2 {
+         height: 80px;
+         width: 80px;
+         position: absolute;
+         top: 5PX;
+         left: 5px;
+         border-radius: 25%;
+      }
+
+      .img3 {
+         height: 60px;
+         width: 100px;
+         position: absolute;
+         bottom: 0px;
+         left: 0px;
+         border-radius: 14px;
+      }
+
+      .img1 {
+         position: relative;
+      }
+
+      .pp {
+         display: none;
+         position: absolute;
+         z-index: 1;
+         margin: 50px 100px;
+         width: 400px;
+         border: 3px solid greenyellow;
+         padding: 20px;
+         background-color: black;
+         color: white;
+      }
+
+      .btn:hover+.pp {
+         display: block
+      }
+   </style>
+</head>
+
+<body>
+   <div class="aa">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a href="#" class="navbar-brand mx-3"><img class="logo" src="logo.jpg"> Welcome</a>
+         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#asd">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="asd">
+            <div class="navbar-nav mx-5" class="navb">
+               <a href="#" class="nav-item nav-link">Home</a></li>
+               <a href="#" class="nav-item nav-link">About</a></li>
+               <a href="#" class="nav-item nav-link">Services</a></li>
+               <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Messages</a></li>
+                  <div class="dropdown-menu bg-warning">
+                     <a href="#" class="dropdown-item">Inbox</a>
+                     <a href="#" class="dropdown-item">Sent</a>
+                     <a href="#" class="dropdown-item">Draft</a>
+                  </div>
+               </div>
+            </div>
+            <form class="d-flex ms-auto mx-2">
+               <div class="input-group">
+                  <input type="text" class="form-control mt-3" placeholder="Search">
+                  <button type="submit" class="btn btn-warning btn-outline-secondary  mt-3">submit</button>
+               </div>
+            </form>
+         </div>
+         <div class="navbar-nav mx-5">
+            <a href="login.html" class="nav-item nav-link">Login</a>
+         </div>
+      </div>
+   </div>
+   <div class="position">
+      <h1>Lovely Sweets</h1>
+      <div class="ad">
+         <div class="box">
+            <div class="img1">
+               <img class="a" src="aa.jpeg">
+               <img class="img2" src="bes.png">
+               <img class="img3" src="ex.png">
+            </div>
+            <h5 class="p">Kheer</h5>
+            <h5 class="p1">Rs.240.00</h5>
+            <h5 class="p2">200g</h5>
+            <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+            <p class="pp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, accusantium.</p>
+
+         </div>
+         <div class="box">
+            <div class="img1">
+               <img class="a" src="bb.jpeg">
+               <img class="img3" src="ex.png">
+
+            </div>
+            <h5 class="p">Kaju katli</h5>
+            <h5 class="p1">Rs.210.00</h5>
+            <h5 class="p2">200g</h5>
+            <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+         </div>
+         <div class="box">
+            <div class="img1">
+
+               <img class="a" src="cc.jpeg">
+               <img class="img2" src="bes.png">
+            </div>
+            <h5 class="p">Khirmohan</h5>
+            <h5 class="p1">Rs.570.00</h5>
+            <h5 class="p2">200g</h5>
+            <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+         </div>
+         <div class="box">
+            <div class="img1">
+
+               <img class="a" src="dd.jpeg">
+               <img class="img2" src="bes.png">
+               <img class="img3" src="ex.png">
+
+            </div>
+            <h5 class="p">Motichoor laddu</h5>
+            <h5 class="p1">Rs.300.00</h5>
+            <h5 class="p2">200g</h5>
+            <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+         </div>
+         <div class="box">
+            <div class="img1">
+
+               <img class="a" src="ee.jpeg">
+               <img class="img2" src="bes.png">
+               <img class="img3" src="ex.png">
+
+            </div>
+            <h5 class="p">Malpua</h5>
+            <h5 class="p1">Rs.810.00</h5>
+            <h5 class="p2">200g</h5>
+            <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+         </div>
+
+      </div>
+   </div>
+   <div class="ad">
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="hh.jpeg">
+            <img class="img2" src="bes.png">
+            <img class="img3" src="ex.png">
+         </div>
+         <h5 class="p">Sohan halwa</h5>
+         <h5 class="p1">Rs.430.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="ii.jpeg">
+         </div>
+         <p class="p">Cham cham</p>
+         <h5 class="p1">Rs.390.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="jj.jpeg">
+            <img class="img2" src="bes.png">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Chandrapuli</h5>
+         <h5 class="p1">Rs.250.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="kk.jpeg">
+
+         </div>
+         <h5 class="p">Chhena poda</h5>
+         <h5 class="p1">Rs.370.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="ll.jpeg">
+            <img class="img3" src="ex.png">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Jaynagarer Moa</h5>
+         <h5 class="p1">Rs.210.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+
+   </div>
+   </div>
+   <div class="ad">
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="nn.jpeg">
+            <img class="img2" src="bes.png">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Pantua</h5>
+         <h5 class="p1">Rs.500.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="oo.jpeg">
+            <img class="img2" src="bes.png">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Rasabali</h5>
+         <h5 class="p1">Rs.310.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="pp.jpeg">
+            <img class="img2" src="bes.png">
+
+         </div>
+         <h5 class="p">Ras malai</h5>
+         <h5 class="p1">Rs.600.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="qq.jpeg">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Sandesh</h5>
+         <h5 class="p1">Rs.270.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="rr.jpeg">
+            <img class="img2" src="bes.png">
+
+         </div>
+         <h5 class="p">Sarpuria</h5>
+         <h5 class="p1">Rs.250.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+
+   </div>
+   </div>
+   <div class="ad">
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="ff.jpeg">
+            <img class="img3" src="ex.png">
+         </div>
+         <h5 class="p">Rabri</h5>
+         <h5 class="p1">Rs.620.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="mm.jpeg">
+            <img class="img2" src="bes.png">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Misti doi</h5>
+         <h5 class="p1">Rs.350.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="ss.jpeg">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Shorbhaja</h5>
+         <h5 class="p1">Rs.400.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="tt.jpeg">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Pakistani Mithai-4</h5>
+         <h5 class="p1">Rs.490.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+      <div class="box">
+         <div class="img1">
+
+            <img class="a" src="uu.jpeg">
+            <img class="img3" src="ex.png">
+
+         </div>
+         <h5 class="p">Chum Chum</h5>
+         <h5 class="p1">Rs.450.00</h5>
+         <h5 class="p2">200g</h5>
+         <a href="#" class="btn btn-dark btn-outline-warning center">Add Cart</a>
+
+      </div>
+   </div>
+</body>
+ 
+</html>

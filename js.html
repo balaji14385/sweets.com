@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Display</title>
+</head>
+<body>
+    <input type="text" id="er" placeholder="Type something here">
+    <button type="button" id="mibt">Click me</button>
+    <div id="output">
+        <img src="pp.jpeg" alt="">
+        addcart 
+        <script>
+            var c=b;
+            var age="20";
+            if(c==age){
+                document.write('elliglbe');
+            }
+        </script>
+    </div> <!-- To display the input value -->
+
+    <script>
+        // Function to display input value
+        function hello() {
+            var b = document.getElementById("er").value; // Get the input value
+            alert(b);
+           ;// Show alert with the input value
+            document.getElementById("output").innerText = b; // Display input value in the output div
+        }
+
+        // Adding event listener to button
+        document.getElementById("mibt").onclick = hello; // Call hello function on button click
+    </script>
+</body>
+</html>
